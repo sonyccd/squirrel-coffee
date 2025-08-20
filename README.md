@@ -92,17 +92,31 @@ The `SimpleIO` class provides console I/O:
 - Flex (lexical analyzer generator)
 - Bison (parser generator)
 - Java Runtime Environment (for Jasmin)
-- Make or CMake
+- CMake (3.10 or higher) or Make
 
 ### Build Commands
-```bash
-# Using Make
-make all        # Build the compiler
-make clean      # Clean build artifacts
 
-# Using CMake (alternative)
-cmake .
+#### Using CMake (Recommended - Cross-platform)
+```bash
+# Create build directory
+mkdir build
+cd build
+
+# Configure and build
+cmake ..
 make
+
+# Or for parallel build
+make -j4
+```
+
+#### Using Make (Legacy)
+```bash
+# Build the compiler
+make all
+
+# Clean build artifacts
+make clean
 ```
 
 ## Using the Compiler

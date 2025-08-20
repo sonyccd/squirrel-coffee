@@ -3,7 +3,7 @@
 
 %{
 #include "Ast.h"
-#include "y.tab.h"
+#include "tjc.tab.h"
 void error( const char *fmt, ... );
 // we have to copy because we can't rely on yytext not changing underneath us:
 #define SAVE_TOKEN yylval.str = strdup(yytext);
